@@ -6,7 +6,7 @@ var timer_llave: Timer
 func _ready() -> void:
 	timer_llave = Timer.new()
 	add_child(timer_llave)
-	timer_llave.wait_time = 2
+	timer_llave.wait_time = 0.5
 	timer_llave.autostart = false
 	timer_llave.timeout.connect(_mover_llave)
 	_mover_llave()

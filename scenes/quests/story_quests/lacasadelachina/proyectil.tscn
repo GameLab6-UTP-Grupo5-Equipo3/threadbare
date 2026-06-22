@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cvgvj116lgy17"]
+
+[ext_resource type="Script" uid="uid://djdr6y0r4l2lm" path="res://proyectil.gd" id="1_72xnj"]
+[ext_resource type="Texture2D" uid="uid://cheu0l1ap1r8y" path="res://assets/first_party/user_interface/hook_indicator.png" id="2_55j4b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rwpxb"]
+radius = 16.0
+
+[node name="Proyectil" type="Area2D" unique_id=1346073800]
+script = ExtResource("1_72xnj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1548461540]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_55j4b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1591219177]
+shape = SubResource("CircleShape2D_rwpxb")

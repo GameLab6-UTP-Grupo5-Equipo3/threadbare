@@ -263,3 +263,8 @@ func _on_player_hook_aiming_changed(is_aiming: bool) -> void:
 		aiming_speed if is_aiming else _initial_speeds.walk_speed
 	)
 	input_walk_behavior.speeds.run_speed = aiming_speed if is_aiming else _initial_speeds.run_speed
+
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_accept"):  # o cualquier tecla, ej: Espacio
+		print("Posición del jugador: ", global_position)
+		print("POSICION SERPIENTE: ", global_position)
